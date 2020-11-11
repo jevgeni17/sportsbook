@@ -21,13 +21,10 @@ window.Vue = require('vue');
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('v-header', require('./components/Header.vue').default);
-Vue.component('v-topbar', require('./components/TopBar.vue').default);
-Vue.component('v-carousel', require('./components/Carousel.vue').default);
-Vue.component('v-about', require('./components/AboutUs.vue').default);
-Vue.component('v-count', require('./components/CountSection.vue').default);
-Vue.component('v-footer', require('./components/Footer.vue').default);
 
 
+
+import router from "./router";
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -36,4 +33,5 @@ Vue.component('v-footer', require('./components/Footer.vue').default);
 
 const app = new Vue({
     el: '#app',
+    router
 });
