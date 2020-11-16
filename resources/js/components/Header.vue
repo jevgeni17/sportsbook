@@ -17,12 +17,7 @@
 							<ul class="uk-navbar-nav uk-visible@s">
 								<li class="uk-active uk-visible@m"><a href="" data-uk-icon="home"></a></li>
 								<li>
-									<a href="#" data-uk-icon="chevron-down">Football</a>
-									<div class="uk-navbar-dropdown">
-										<ul class="uk-nav uk-navbar-dropdown-nav">
-											<li><a href="#">Champions League</a></li>
-										</ul>
-									</div>
+									<a href="/football" >Football</a>
 								</li>
 							</ul>
 							<a class="uk-navbar-toggle uk-navbar-item uk-hidden@s" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>

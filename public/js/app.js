@@ -1967,11 +1967,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2015,10 +2010,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      selected: 'soccer_uefa_champs_league',
+      options: [{
+        title: "Champions League",
+        key: "soccer_uefa_champs_league"
+      }, {
+        title: "La Liga",
+        key: "soccer_spain_la_liga"
+      }],
       bets: []
     };
   },
@@ -2032,7 +2053,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('https://api.the-odds-api.com/v3/odds', {
         params: {
           'api_key': "b9087febee1ea3565f283e7dbd3f8065",
-          'sport': "soccer_uefa_champs_league",
+          'sport': this.selected,
           'region': 'eu',
           'mkt': 'h2h',
           'dateFormat': 'iso'
@@ -37915,29 +37936,8 @@ var staticRenderFns = [
                         ]),
                         _vm._v(" "),
                         _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: {
-                                href: "#",
-                                "data-uk-icon": "chevron-down"
-                              }
-                            },
-                            [_vm._v("Football")]
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "uk-navbar-dropdown" }, [
-                            _c(
-                              "ul",
-                              { staticClass: "uk-nav uk-navbar-dropdown-nav" },
-                              [
-                                _c("li", [
-                                  _c("a", { attrs: { href: "#" } }, [
-                                    _vm._v("Champions League")
-                                  ])
-                                ])
-                              ]
-                            )
+                          _c("a", { attrs: { href: "/football" } }, [
+                            _vm._v("Football")
                           ])
                         ])
                       ]),
@@ -38076,61 +38076,136 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "table",
-    { staticClass: "uk-table uk-table-middle uk-table-divider" },
-    _vm._l(_vm.bets, function(bet) {
-      return _c("tbody", [
-        _vm._v("\r\n        " + _vm._s(bet.sport_nice) + "\r\n        "),
-        _c("tr", [
-          _c("td", [_vm._v(_vm._s(bet.commence_time))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(bet.teams[0]))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(bet.teams[1]))]),
-          _vm._v(" "),
-          _c("td", [
-            _vm._v("1"),
-            _c(
-              "button",
+  return _c("div", [
+    _c(
+      "div",
+      { staticClass: "uk-margin uk-form-width-medium uk-margin-medium-top" },
+      [
+        _c(
+          "select",
+          {
+            directives: [
               {
-                staticClass: "uk-button uk-button-default",
-                attrs: { type: "button" }
-              },
-              [_vm._v(_vm._s(bet.sites[0].odds.h2h[0]))]
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _vm._v("x"),
-            _c(
-              "button",
-              {
-                staticClass: "uk-button uk-button-default",
-                attrs: { type: "button" }
-              },
-              [_vm._v(_vm._s(bet.sites[0].odds.h2h[1]))]
-            )
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _vm._v("2"),
-            _c(
-              "button",
-              {
-                staticClass: "uk-button uk-button-default",
-                attrs: { type: "button" }
-              },
-              [_vm._v(_vm._s(bet.sites[0].odds.h2h[2]))]
-            )
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selected,
+                expression: "selected"
+              }
+            ],
+            staticClass: "uk-select",
+            on: {
+              change: [
+                function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.selected = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                },
+                function($event) {
+                  return _vm.LoadBets()
+                }
+              ]
+            }
+          },
+          _vm._l(_vm.options, function(option) {
+            return _c("option", { domProps: { value: option.key } }, [
+              _vm._v(_vm._s(option.title))
+            ])
+          }),
+          0
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "table",
+      {
+        staticClass:
+          "uk-table uk-table-responsive uk-table-divider uk-table-hover uk-table-small uk-table-middle uk-table-responsive "
+      },
+      [
+        _c("caption", { staticClass: "uk-text-left" }, [_vm._v("Bets")]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._l(_vm.bets, function(bet) {
+          return _c("tbody", [
+            _c("tr", [
+              _c("td", [_vm._v(_vm._s(bet.commence_time))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(bet.teams[0]))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(bet.teams[1]))]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "uk-button uk-button-default",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v(_vm._s(bet.sites[0].odds.h2h[0]))]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "uk-button uk-button-default",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v(_vm._s(bet.sites[0].odds.h2h[1]))]
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "uk-button uk-button-default",
+                    attrs: { type: "button" }
+                  },
+                  [_vm._v(_vm._s(bet.sites[0].odds.h2h[2]))]
+                )
+              ])
+            ])
           ])
-        ])
-      ])
-    }),
-    0
-  )
+        })
+      ],
+      2
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("TIME")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("TEAM 1")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("TEAM 2")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("WIN 1")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("DRAW")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "uk-text-left" }, [_vm._v("WIN 2")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
