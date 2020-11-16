@@ -19,10 +19,10 @@
 
     export default {
         data: function() {
-         return  {
-           bets: []
-         }
-    },
+            return {
+                bets: []
+            }
+        },
         mounted() {
             this.LoadBets();
         },
@@ -33,11 +33,14 @@
                         'api_key': process.env.MIX_BETTING_API_KEY,
                         'sport': "soccer_uefa_champs_league",
                         'region': 'eu',
-                        'mkt': 'h2h'
+                        'mkt': 'h2h',
+                        'dateFormat': 'iso'
                     }
                 }).then(response => {
                     this.bets = response.data.data;
-                   // console.log(response.data.data);
+
+                }).catch(error => {
+                    console.log(error);
                 })
             }
         }

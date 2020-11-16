@@ -1920,6 +1920,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1982,10 +2034,13 @@ __webpack_require__.r(__webpack_exports__);
           'api_key': "b9087febee1ea3565f283e7dbd3f8065",
           'sport': "soccer_uefa_champs_league",
           'region': 'eu',
-          'mkt': 'h2h'
+          'mkt': 'h2h',
+          'dateFormat': 'iso'
         }
       }).then(function (response) {
-        _this.bets = response.data.data; // console.log(response.data.data);
+        _this.bets = response.data.data;
+      })["catch"](function (error) {
+        console.log(error);
       });
     }
   }
@@ -2002,6 +2057,201 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -37602,32 +37852,209 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    { staticClass: "uk-navbar-container", attrs: { "uk-navbar": "" } },
-    [
-      _c("div", { staticClass: "uk-navbar-center" }, [
-        _c(
-          "ul",
-          { staticClass: "uk-navbar-nav" },
-          _vm._l(_vm.links, function(link) {
-            return _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: link.href } }, [
-                  _vm._v(_vm._s(link.title))
-                ])
-              ],
-              1
-            )
-          }),
-          0
-        )
-      ])
-    ]
-  )
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { "uk-sticky": "" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "top-wrap uk-position-relative uk-light uk-background-secondary"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "nav",
+              attrs: {
+                "data-uk-sticky":
+                  "cls-active: uk-background-secondary uk-box-shadow-medium; top: 50vh; animation: uk-animation-slide-top"
+              }
+            },
+            [
+              _c("div", { staticClass: "uk-container" }, [
+                _c(
+                  "nav",
+                  {
+                    staticClass:
+                      "uk-navbar uk-navbar-container uk-navbar-transparent",
+                    attrs: { "data-uk-navbar": "" }
+                  },
+                  [
+                    _c("div", { staticClass: "uk-navbar-left" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "uk-navbar-item uk-padding-remove-horizontal"
+                        },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "uk-logo",
+                              attrs: { title: "Logo", href: "" }
+                            },
+                            [_vm._v("SPORTS BETTING")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "uk-navbar-right" }, [
+                      _c("ul", { staticClass: "uk-navbar-nav uk-visible@s" }, [
+                        _c("li", { staticClass: "uk-active uk-visible@m" }, [
+                          _c("a", {
+                            attrs: { href: "", "data-uk-icon": "home" }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: "#",
+                                "data-uk-icon": "chevron-down"
+                              }
+                            },
+                            [_vm._v("Football")]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "uk-navbar-dropdown" }, [
+                            _c(
+                              "ul",
+                              { staticClass: "uk-nav uk-navbar-dropdown-nav" },
+                              [
+                                _c("li", [
+                                  _c("a", { attrs: { href: "#" } }, [
+                                    _vm._v("Champions League")
+                                  ])
+                                ])
+                              ]
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("a", {
+                        staticClass:
+                          "uk-navbar-toggle uk-navbar-item uk-hidden@s",
+                        attrs: {
+                          "data-uk-toggle": "",
+                          "data-uk-navbar-toggle-icon": "",
+                          href: "#offcanvas-nav"
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              attrs: {
+                id: "offcanvas-nav",
+                "data-uk-offcanvas": "flip: true; overlay: false"
+              }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide"
+                },
+                [
+                  _c("button", {
+                    staticClass: "uk-offcanvas-close uk-close uk-icon",
+                    attrs: { type: "button", "data-uk-close": "" }
+                  }),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "uk-nav uk-nav-default" }, [
+                    _c("li", { staticClass: "uk-active" }, [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Active")])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "uk-parent" }, [
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Parent")]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "uk-nav-sub" }, [
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Sub item")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Sub item")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "uk-nav-header" }, [
+                      _vm._v("Header")
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#js-options" } }, [
+                        _c("span", {
+                          staticClass: "uk-margin-small-right uk-icon",
+                          attrs: { "data-uk-icon": "icon: table" }
+                        }),
+                        _vm._v(" Item")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("span", {
+                          staticClass: "uk-margin-small-right uk-icon",
+                          attrs: { "data-uk-icon": "icon: thumbnails" }
+                        }),
+                        _vm._v(" Item")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", { staticClass: "uk-nav-divider" }),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("span", {
+                          staticClass: "uk-margin-small-right uk-icon",
+                          attrs: { "data-uk-icon": "icon: trash" }
+                        }),
+                        _vm._v(" Item")
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h3", [_vm._v("Title")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    )
+                  ])
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -37725,9 +38152,635 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("index")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "section",
+        {
+          staticClass: "uk-section uk-section-default",
+          attrs: { id: "content" }
+        },
+        [
+          _c("div", { staticClass: "uk-container" }, [
+            _c(
+              "div",
+              {
+                staticClass: "uk-section uk-section-small uk-padding-remove-top"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass:
+                      "uk-subnav uk-subnav-pill uk-flex uk-flex-center",
+                    attrs: {
+                      "data-uk-switcher":
+                        "connect: .uk-switcher; animation: uk-animation-fade"
+                    }
+                  },
+                  [
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "uk-border-pill", attrs: { href: "#" } },
+                        [_vm._v("Discover")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "uk-border-pill", attrs: { href: "#" } },
+                        [_vm._v("Benefits")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "uk-border-pill", attrs: { href: "#" } },
+                        [_vm._v("Features")]
+                      )
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("ul", { staticClass: "uk-switcher uk-margin" }, [
+              _c("li", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "uk-grid uk-child-width-1-2@l uk-flex-middle",
+                    attrs: {
+                      "data-uk-grid": "",
+                      "data-uk-scrollspy":
+                        "target: > div; cls: uk-animation-slide-left-medium"
+                    }
+                  },
+                  [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                          "data-src": "img/marketing-1.svg",
+                          alt: "",
+                          "data-uk-img": ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        attrs: {
+                          "data-uk-scrollspy-class":
+                            "uk-animation-slide-right-medium"
+                        }
+                      },
+                      [
+                        _c("h6", { staticClass: "uk-text-primary" }, [
+                          _vm._v("MAIN REASONS")
+                        ]),
+                        _vm._v(" "),
+                        _c("h2", { staticClass: "uk-margin-small-top" }, [
+                          _vm._v(
+                            "Take decisions with real time data based on users interaction."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "subtitle-text" }, [
+                          _vm._v(
+                            "\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n\t\t\t\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\n\t\t\t\t\t\t\t\t\tquis nostrud exercitation.\r\n\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "uk-grid uk-child-width-1-2@s",
+                            attrs: { "data-uk-grid": "" }
+                          },
+                          [
+                            _c("div", [
+                              _c("h4", [_vm._v("Great stuff")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c("h4", [_vm._v("Data analysis")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "uk-grid uk-child-width-1-2@l uk-flex-middle",
+                    attrs: {
+                      "data-uk-grid": "",
+                      "data-uk-scrollspy":
+                        "target: > div; cls: uk-animation-slide-left-medium"
+                    }
+                  },
+                  [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                          "data-src": "img/marketing-8.svg",
+                          alt: "",
+                          "data-uk-img": ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        attrs: {
+                          "data-uk-scrollspy-class":
+                            "uk-animation-slide-right-medium"
+                        }
+                      },
+                      [
+                        _c("h6", { staticClass: "uk-text-primary" }, [
+                          _vm._v("MAIN REASONS")
+                        ]),
+                        _vm._v(" "),
+                        _c("h2", { staticClass: "uk-margin-small-top" }, [
+                          _vm._v(
+                            "Take decisions with real time data based on users interaction."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "subtitle-text" }, [
+                          _vm._v(
+                            "\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n\t\t\t\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\n\t\t\t\t\t\t\t\t\tquis nostrud exercitation.\r\n\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "uk-grid uk-child-width-1-2@s",
+                            attrs: { "data-uk-grid": "" }
+                          },
+                          [
+                            _c("div", [
+                              _c("h4", [_vm._v("Great stuff")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c("h4", [_vm._v("Data analysis")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "div",
+                  {
+                    staticClass: "uk-grid uk-child-width-1-2@l uk-flex-middle",
+                    attrs: {
+                      "data-uk-grid": "",
+                      "data-uk-scrollspy":
+                        "target: > div; cls: uk-animation-slide-left-medium"
+                    }
+                  },
+                  [
+                    _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                          "data-src": "img/marketing-9.svg",
+                          alt: "",
+                          "data-uk-img": ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        attrs: {
+                          "data-uk-scrollspy-class":
+                            "uk-animation-slide-right-medium"
+                        }
+                      },
+                      [
+                        _c("h6", { staticClass: "uk-text-primary" }, [
+                          _vm._v("MAIN REASONS")
+                        ]),
+                        _vm._v(" "),
+                        _c("h2", { staticClass: "uk-margin-small-top" }, [
+                          _vm._v(
+                            "Take decisions with real time data based on users interaction."
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "subtitle-text" }, [
+                          _vm._v(
+                            "\r\n\t\t\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n\t\t\t\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\n\t\t\t\t\t\t\t\t\tquis nostrud exercitation.\r\n\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "uk-grid uk-child-width-1-2@s",
+                            attrs: { "data-uk-grid": "" }
+                          },
+                          [
+                            _c("div", [
+                              _c("h4", [_vm._v("Great stuff")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", [
+                              _c("h4", [_vm._v("Data analysis")]),
+                              _vm._v(" "),
+                              _c("p", [
+                                _vm._v(
+                                  "Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. "
+                                ),
+                                _c("a", { attrs: { href: "" } }, [
+                                  _vm._v("Learn more.")
+                                ])
+                              ])
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "uk-section uk-section-secondary uk-section-large" },
+        [
+          _c("div", { staticClass: "uk-container" }, [
+            _c(
+              "div",
+              { staticClass: "uk-grid uk-child-width-1-2@l uk-flex-middle" },
+              [
+                _c("div", [
+                  _c("h6", [_vm._v("SIMPLIFY THINGS")]),
+                  _vm._v(" "),
+                  _c("h2", { staticClass: "uk-margin-small-top uk-h1" }, [
+                    _vm._v("Manage all your data from one place only.")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "subtitle-text" }, [
+                    _vm._v(
+                      "\r\n\t\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n\t\t\t\t\t\t\ttempor incididunt ut labore et dolore magna aliqua.\r\n\t\t\t\t\t\t"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "uk-button uk-button-primary uk-border-pill",
+                      attrs: { href: "#", "data-uk-icon": "arrow-right" }
+                    },
+                    [_vm._v("LEARN MORE")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { attrs: { "data-uk-scrollspy": "cls: uk-animation-fade" } },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                        "data-src": "img/marketing-2.svg",
+                        "data-uk-img": "",
+                        alt: "Image"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "uk-section uk-section-small uk-section-muted" },
+        [
+          _c("div", { staticClass: "uk-container uk-container-small" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "uk-grid uk-child-width-1-4 uk-child-width-expand@m logos-grid",
+                attrs: {
+                  "data-uk-grid": "",
+                  "data-uk-scrollspy":
+                    "cls: uk-animation-scale-down; target: > div > img; delay: 100"
+                }
+              },
+              [
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-1.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-2.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-3.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-6.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-7.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-8.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-4.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+                      "data-src": "img/logo-5.svg",
+                      "data-uk-img": "",
+                      alt: "Image"
+                    }
+                  })
+                ])
+              ]
+            )
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "footer",
+        {
+          staticClass:
+            "uk-section uk-section-secondary uk-padding-remove-bottom"
+        },
+        [
+          _c("div", { staticClass: "uk-container" }, [
+            _c(
+              "div",
+              {
+                staticClass: "uk-grid uk-grid-large",
+                attrs: { "data-uk-grid": "" }
+              },
+              [
+                _c("div", { staticClass: "uk-width-1-2@m" }, [
+                  _c("h5", [_vm._v("OUR COMPANY")]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud cillum dolore eu fugiat nulla contact to: "
+                    ),
+                    _c("a", { attrs: { href: "#", title: "" } }, [
+                      _vm._v("info@company.com")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("a", {
+                      staticClass: "uk-icon-button",
+                      attrs: { href: "", "data-uk-icon": "twitter" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", {
+                      staticClass: "uk-icon-button",
+                      attrs: { href: "", "data-uk-icon": "facebook" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", {
+                      staticClass: "uk-icon-button",
+                      attrs: { href: "", "data-uk-icon": "instagram" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "uk-width-1-6@m" }, [
+                  _c("h5", [_vm._v("PRODUCTS")]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "uk-list" }, [
+                    _c("li", [_vm._v("Big Data")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Marketing")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Analytics")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("AI Lab")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "uk-width-1-6@m" }, [
+                  _c("h5", [_vm._v("OUR COMPANY")]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "uk-list" }, [
+                    _c("li", [_vm._v("Team")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Work")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Culture")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Contact Us")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "uk-width-1-6@m" }, [
+                  _c("h5", [_vm._v("OUR OFFICES")]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "uk-list" }, [
+                    _c("li", [_vm._v("London")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Chicago")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Dubai")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Brussels")])
+                  ])
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "uk-text-center uk-padding uk-padding-remove-horizontal"
+            },
+            [
+              _c("span", { staticClass: "uk-text-small uk-text-muted" }, [
+                _vm._v("© 2019 Marketing Layout - "),
+                _c(
+                  "a",
+                  { attrs: { href: "https://github.com/zzseba78/Kick-Off" } },
+                  [_vm._v("Created by KickOff")]
+                ),
+                _vm._v(" | Built with "),
+                _c(
+                  "a",
+                  {
+                    attrs: {
+                      href: "http://getuikit.com",
+                      title: "Visit UIkit 3 site",
+                      target: "_blank",
+                      "data-uk-tooltip": ""
+                    }
+                  },
+                  [_c("span", { attrs: { "data-uk-icon": "uikit" } })]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
